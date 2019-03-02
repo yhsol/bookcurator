@@ -8,3 +8,9 @@ Book curation App with React and ES6.
 - Date
 - Detail (with Similar)
 - Search
+
+## API Verbs
+
+- sort=date
+- sort=count
+- sort-sim

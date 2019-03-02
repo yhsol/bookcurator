@@ -5,6 +5,7 @@ import Home from '../Routes/Home';
 import Count from '../Routes/Count';
 import Recent from '../Routes/Recent';
 import Search from '../Routes/Search';
+import Detail from '../Routes/Detail';
 
 export default () => (
 	<Router>
@@ -15,6 +16,7 @@ export default () => (
 				<Route path="/count" exact component={Count} />
 				<Route path="/recent" exact component={Recent} />
 				<Route path="/search" exact component={Search} />
+				<Route path="/detail/:id" exact component={Detail} />
 				<Redirect from="*" to="/" />
 			</Switch>
 		</React.Fragment>
