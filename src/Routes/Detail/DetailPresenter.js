@@ -78,6 +78,18 @@ const InfoOverview = styled.p`
 	font-size: 17px;
 `;
 
+const InfoCommentArea = styled.textarea`
+	all: unset;
+	margin-top: 120px;
+	font-size: 24px;
+	color: white;
+	::placeholder {
+		color: white;
+		line-height: 30px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	}
+`;
+
 const Comments = styled.div`
 	width: 75vw;
 	margin: 30px auto;
@@ -128,18 +140,23 @@ const DetailPresenter = ({ result, error, loading }) =>
 									result.videos.results.map(
 										(video, index) =>
 											index < 3 ? (
-												<a
-													href={`https://www.youtube.com/watch?v=${video.key}`}
-													target={`_blank`}
-												>
-													<div>{video.name}</div>
-												</a>
+												<div>
+													<a
+														href={`https://www.youtube.com/watch?v=${video.key}`}
+														target={`_blank`}
+													>
+														{video.name}
+													</a>
+												</div>
 											) : null
 									)
 								) : null}
 							</InfoVideos>
 						</InfoItemContainer>
 						<InfoOverview>{result.overview ? result.overview : 'Nothing Found'}</InfoOverview>
+						<InfoCommentArea name="textarea" rows="5" cols="75" placeholder="Write Comments here...">
+							{}
+						</InfoCommentArea>
 					</InfoSection>
 				</Content>
 			</Container>
