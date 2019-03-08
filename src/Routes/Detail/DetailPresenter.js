@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Loader from '../../Components/Loader';
+import Helmet from 'react-helmet';
+import ErrorMessage from '../../Components/ErrorMessage';
 
 const Container = styled.div`
 	width: 100vw;
@@ -98,10 +100,20 @@ const Comments = styled.div`
 
 const DetailPresenter = ({ result, error, loading }) =>
 	loading ? (
-		<Loader />
+		<React.Fragment>
+			<Helmet>
+				<title>Loading | Bookcurator</title>
+			</Helmet>
+			<Loader />
+		</React.Fragment>
+	) : error ? (
+		<ErrorMessage text={error} color="#ff8906" />
 	) : (
 		<React.Fragment>
 			<Container>
+				<Helmet>
+					<title>{result.title} | Bookcurator</title>
+				</Helmet>
 				<BackDrop bgImage={`https://image.tmdb.org/t/p/original/${result.backdrop_path}`} />
 				<Content>
 					<CoverSection
