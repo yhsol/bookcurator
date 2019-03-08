@@ -2,6 +2,9 @@
 
 Book curation App with React and ES6.
 
+## Pages
+- https://yhsol.github.io/bookcurator
+
 ## Screens(Route)
 - Home (Header Title)
 - Count
