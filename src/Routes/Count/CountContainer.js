@@ -26,7 +26,7 @@ export default class extends React.Component {
 		}
 	}
 
-	// render things to HomePresenter
+	// render things to CountPresenter
 	render() {
 		const { popular, error, loading } = this.state;
 		return <CountPresenter popular={popular} error={error} loading={loading} />;

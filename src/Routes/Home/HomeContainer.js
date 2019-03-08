@@ -20,7 +20,7 @@ export default class extends React.Component {
 			})
 		} catch {
 			this.setState({
-				error: "Cat't find infomation"
+				error: "CAN'T FIND INFOMATION"
 			})
 		} finally {
 			this.setState({
@@ -32,7 +32,6 @@ export default class extends React.Component {
 	// render things to HomePresenter
 	render() {
 		const { popular, upcoming, error, loading } = this.state;
-		console.log(this.state);
 		return <HomePresenter popular={popular} upcoming={upcoming} error={error} loading={loading} />;
 	}
 }

@@ -3,9 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Header = styled.header`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -13,6 +10,8 @@ const Header = styled.header`
 	height: 64px;
 	z-index: 10;
 	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	opacity: 0.98;
 `;
 
 const HeaderArea = styled.div`
@@ -29,6 +28,7 @@ const HeaderTitle = styled.div`
 	color: #ff8906;
 	font-size: 30px;
 	font-weight: 500;
+	text-align: center;
 `;
 
 const HeaderNav = styled.ul`display: flex;`;

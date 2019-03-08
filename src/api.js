@@ -8,6 +8,8 @@ const api = axios.create({
 	}
 });
 
+// api 호출 시 앞에 movie 를 붙이는 것은 api 정보가 그렇게 구성되어 있기 때문이다. 이름을 바꾸면 에러가 난다.
+
 export const bookApi = {
 	popular: () => api.get('movie/popular'),
 	upcoming: () => api.get('movie/upcoming'),

@@ -10,7 +10,11 @@ Book curation App with React and ES6.
 - Search
 
 ## API Verbs
+- sort=count, date, sim
+- popular, upcoming, search, detail
 
-- sort=date
-- sort=count
-- sort-sim
+## Container-Presenter Pattern
+- Routes Directory -> each Route Directory and index.js
+
+## Section
+- screen layout

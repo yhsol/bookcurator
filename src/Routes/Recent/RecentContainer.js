@@ -26,7 +26,7 @@ export default class extends React.Component {
 		}
 	}
 
-	// render things to HomePresenter
+	// render things to UpcomingPresenter
 	render() {
 		const { upcoming, error, loading } = this.state;
 		console.log(this.state);

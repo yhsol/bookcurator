@@ -4,17 +4,26 @@ import { bookApi } from '../../api';
 
 export default class extends React.Component {
 	state = {
-		movieResults: null,
+		searchResults: null,
 		searchTerm: '',
 		error: null,
 		loading: false
 	};
 
-	handleSubmit = () => {
+	handleSubmit = (event) => {
+		event.preventDefault();
 		const { searchTerm } = this.state;
 		if (searchTerm !== '') {
 			this.searchByTerm();
 		}
+	};
+	
+	updateTerm = (event) => {
+		const { target: { value } } = event;
+		console.log(value);
+		this.setState({
+			searchTerm: value
+		})
 	};
 
 	searchByTerm = async () => {
@@ -23,9 +32,9 @@ export default class extends React.Component {
 			loading: true
 		})
 		try {
-			const {data: {results: movieResults}} = await bookApi.search(searchTerm);
+			const {data: {results: searchResults}} = await bookApi.search(searchTerm);
 			this.setState({
-				movieResults: movieResults
+				searchResults: searchResults
 			})
 		} catch {
 			this.setState({
@@ -37,16 +46,18 @@ export default class extends React.Component {
 			});
 		}
 	};
+	// maybe componentDidMount 에서 location.reload 나 history 를 이용해서 refresh 할 수 있지 않을까.
 
-	// render things to HomePresenter
+	// render things to SearchPresenter
 	render() {
-		const { movieResults, searchTerm, error, loading } = this.state;
+		const { searchResults, searchTerm, error, loading } = this.state;
 		return <SearchPresenter 
-			movieResults={movieResults} 
+			searchResults={searchResults} 
 			searchTerm={searchTerm} 
 			error={error} 
 			loading={loading} 
-			handleSubmit={this.handleSubmit} 
+			handleSubmit={this.handleSubmit}
+			updateTerm={this.updateTerm}
 		/>;
 	}
 }
