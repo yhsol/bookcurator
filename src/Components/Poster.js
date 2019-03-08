@@ -42,7 +42,7 @@ const Year = styled.span``;
 const Overview = styled.div`line-height: 125%;`;
 
 const Image = styled.div`
-	background-image: url(${(props) => `https://image.tmdb.org/t/p/w500/${props.bgUrl}`});
+	background-image: url(${(props) => props.bgUrl});
 	height: 260px;
 	width: 177px;
 	background-size: cover;
@@ -71,7 +71,7 @@ const Poster = ({ id, imageUrl, title, rating, year, overview, isBook = false })
 					<Title>{title}</Title>
 				</SLink>
 				<SubInfoSection>
-					<Year>{year}</Year>
+					<Year>{year && year.substring(0, 4)}</Year>
 					<Rating>
 						{' '}
 						<span role="img" aria-label="rating">
@@ -81,11 +81,13 @@ const Poster = ({ id, imageUrl, title, rating, year, overview, isBook = false })
 					</Rating>
 				</SubInfoSection>
 			</InfoSection>
-			<Overview>{overview}</Overview>
+			<Overview>{overview && `${overview.substring(0, 110)}...`}</Overview>
 		</TextContainer>
 		<ImageContainer>
 			<SLink to={isBook && `/detail/${id}`}>
-				<Image bgUrl={imageUrl} />
+				<Image
+					bgUrl={imageUrl ? `https://image.tmdb.org/t/p/w500/${imageUrl}` : require('../assets/noPoster.jpg')}
+				/>
 			</SLink>
 		</ImageContainer>
 	</Container>

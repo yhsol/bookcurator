@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Container = styled.div``;
 
 const Image = styled.div`
-	background-image: url(${(props) => `https://image.tmdb.org/t/p/w500/${props.bgUrl}`});
+	background-image: url(${(props) => props.bgUrl});
 	height: 170px;
 	background-size: cover;
 	background-position: center center;
@@ -58,9 +58,13 @@ const PosterSmall = ({ id, imageUrl, title, rating, year, isBook = false }) => (
 		<Container>
 			<ImageContainer>
 				<ImageForm>
-					<Image bgUrl={imageUrl} />
+					<Image
+						bgUrl={
+							imageUrl ? `https://image.tmdb.org/t/p/w500/${imageUrl}` : require('../assets/noPoster.jpg')
+						}
+					/>
 					<YearRating>
-						<Year>{year}</Year>
+						<Year>{year && year.substring(0, 4)}</Year>
 						<Rating>
 							<span role="img" aria-label="rating">
 								★
@@ -69,7 +73,7 @@ const PosterSmall = ({ id, imageUrl, title, rating, year, isBook = false }) => (
 						</Rating>
 					</YearRating>
 				</ImageForm>
-				<Title>{title}</Title>
+				<Title>{title && title.length > 8 ? `${title.substring(0, 8)}...` : title}</Title>
 			</ImageContainer>
 		</Container>
 	</Link>

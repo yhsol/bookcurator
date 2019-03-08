@@ -8,8 +8,7 @@ import PosterSmall from '../../Components/PosterSmall';
 
 const Container = styled.div`
 	width: 75%;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 20px auto;
 `;
 
 const Form = styled.form`
@@ -38,11 +37,11 @@ const SearchPresenter = ({ searchResults, searchTerm, error, loading, handleSubm
 					<PosterSmall
 						key={movie.id}
 						id={movie.id}
-						title={movie.title && `${movie.title.substring(0, 15)}...`}
+						title={movie.title}
 						imageUrl={movie.poster_path}
 						rating={movie.vote_average}
 						// 아래와 같은 경우, substring 이나 slice 같은 메서드를 쓰는 경우 앞의 값이 null일 경우 에러가 생길 수 있어서 그 값을 확인하는 것이 필요.
-						year={movie.release_date && movie.release_date.substring(0, 4)}
+						year={movie.release_Date}
 						isBook={true}
 					/>
 				))}

@@ -8,8 +8,7 @@ import Poster from '../../Components/Poster';
 
 const Container = styled.div`
 	width: 75%;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 20px auto;
 `;
 
 const SSpan = styled.span`
@@ -33,9 +32,9 @@ const CountPresenter = ({ popular, error, loading }) =>
 							imageUrl={movie.poster_path}
 							rating={movie.vote_average}
 							// 아래와 같은 경우, substring 이나 slice 같은 메서드를 쓰는 경우 앞의 값이 null일 경우 에러가 생길 수 있어서 그 값을 확인하는 것이 필요.
-							year={movie.release_date && movie.release_date.substring(0, 4)}
+							year={movie.release_date}
 							isBook={true}
-							overview={movie.overview && `${movie.overview.substring(0, 110)}...`}
+							overview={movie.overview}
 						/>
 					))}
 				</SectionRows>
