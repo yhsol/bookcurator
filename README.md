@@ -6,11 +6,10 @@ Book curation App with React and ES6.
 - Home (Header Title)
 - Count
 - Date
-- Detail (with Similar)
+- Detail (with Videos, Similar, Comments)
 - Search
 
 ## API Verbs
-- sort=count, date, sim
 - popular, upcoming, search, detail
 
 ## Container-Presenter Pattern
