@@ -56,7 +56,6 @@ const SearchPresenter = ({ searchResults, searchTerm, error, loading, handleSubm
 			{error && <ErrorMessage text={error} color="#ff8906" />}
 			{searchResults && searchResults.length === 0 && <ErrorMessage text="Nothing Found" color="#82ccdd" />}
 		</Container>
-		<CountContainer />
 	</React.Fragment>
 );
 
