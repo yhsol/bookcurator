@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Loader from '../../Components/Loader';
 import Helmet from 'react-helmet';
 import ErrorMessage from '../../Components/ErrorMessage';
+import HomeContainer from '../Home/HomeContainer';
 
 const Container = styled.div`
 	width: 100vw;
@@ -138,6 +139,7 @@ const DetailPresenter = ({ result, error, loading }) =>
 							<InfoDivider>/</InfoDivider>
 							<InfoItem>
 								{/* result.genres 에다가 map 을 하면 각각의 Array 는 genre 라는 새로운 Array들로 구성된다. 그리고 새롭게 구성된 genre라는 Array들에서 name값을 찾는것. */}
+								{/* index 값은 0부터 시작하므로 array.length === index + 1 은 새 array 의 마지막 값에서 참이된다. */}
 								{result.genres && result.genres.length !== 0 ? (
 									result.genres.map(
 										(genre, index) =>
@@ -173,6 +175,7 @@ const DetailPresenter = ({ result, error, loading }) =>
 				</Content>
 			</Container>
 			<Comments>It's comment area</Comments>
+			<HomeContainer />
 		</React.Fragment>
 	);
 

@@ -12,11 +12,6 @@ const Container = styled.div`
 	margin: 20px auto;
 `;
 
-const SSpan = styled.span`
-	border-top: 1px solid rgba(0, 0, 0, 0.3);
-	padding-top: 20px;
-`;
-
 const RecentPresenter = ({ upcoming, error, loading }) => (
 	<React.Fragment>
 		<Helmet>

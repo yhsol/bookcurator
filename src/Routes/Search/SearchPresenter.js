@@ -6,6 +6,7 @@ import Loader from '../../Components/Loader';
 import ErrorMessage from '../../Components/ErrorMessage';
 import PosterSmall from '../../Components/PosterSmall';
 import Helmet from 'react-helmet';
+import CountContainer from '../Count';
 
 const Container = styled.div`
 	width: 75%;
@@ -55,6 +56,7 @@ const SearchPresenter = ({ searchResults, searchTerm, error, loading, handleSubm
 			{error && <ErrorMessage text={error} color="#ff8906" />}
 			{searchResults && searchResults.length === 0 && <ErrorMessage text="Nothing Found" color="#82ccdd" />}
 		</Container>
+		<CountContainer />
 	</React.Fragment>
 );
 
