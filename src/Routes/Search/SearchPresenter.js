@@ -6,7 +6,6 @@ import Loader from '../../Components/Loader';
 import ErrorMessage from '../../Components/ErrorMessage';
 import PosterSmall from '../../Components/PosterSmall';
 import Helmet from 'react-helmet';
-import CountContainer from '../Count';
 
 const Container = styled.div`
 	width: 75%;

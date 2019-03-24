@@ -135,7 +135,12 @@ const DetailPresenter = ({ result, error, loading }) =>
 							<InfoDivider>/</InfoDivider>
 							<InfoItem>{result.runtime ? `${result.runtime} min` : '! Run Time'}</InfoItem>
 							<InfoDivider>/</InfoDivider>
-							<InfoItem>{result.vote_average ? `★ ${result.vote_average}` : '! Vote Average'}</InfoItem>
+							<InfoItem>
+								<span role="image" aria-label="rating">
+									★
+								</span>{' '}
+								{result.vote_average ? `${result.vote_average}` : '! Vote Average'}
+							</InfoItem>
 							<InfoDivider>/</InfoDivider>
 							<InfoItem>
 								{/* result.genres 에다가 map 을 하면 각각의 Array 는 genre 라는 새로운 Array들로 구성된다. 그리고 새롭게 구성된 genre라는 Array들에서 name값을 찾는것. */}
