@@ -16,7 +16,7 @@ export const bookApi = {
 	detail: (id) =>
 		api.get(`movie/${id}`, {
 			params: {
-				append_to_response: 'videos, similar'
+				append_to_response: 'videos similar'
 			}
 		}),
 	search: (term) =>
