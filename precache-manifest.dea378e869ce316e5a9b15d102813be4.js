@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/bookcurator/static/js/runtime~main.67693896.js"
   },
   {
-    "revision": "6301fc5b62ba88259aab",
-    "url": "/bookcurator/static/js/main.6301fc5b.chunk.js"
+    "revision": "1597d0db81788f277644",
+    "url": "/bookcurator/static/js/main.1597d0db.chunk.js"
   },
   {
-    "revision": "16a55059d8d8f87c40db",
-    "url": "/bookcurator/static/js/2.16a55059.chunk.js"
+    "revision": "1b992246741a51a116d3",
+    "url": "/bookcurator/static/js/2.1b992246.chunk.js"
   },
   {
-    "revision": "eea64f2f2dd04694b1611afd7253ef5b",
+    "revision": "83677fd8c97ffd573ee609d1d7d5e051",
     "url": "/bookcurator/index.html"
   }
 ];
