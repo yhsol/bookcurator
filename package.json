@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@material-ui/core": "^4.7.2",
 		"axios": "^0.18.0",
 		"gh-pages": "^2.0.1",
 		"helmet": "^3.15.1",
@@ -27,5 +28,10 @@
 		"extends": "react-app"
 	},
 	"homepage": "https://yhsol.github.io/bookcurator",
-	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ]
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }
