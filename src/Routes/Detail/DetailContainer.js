@@ -1,8 +1,9 @@
 import React from "react";
+import DetailPresenter from "./DetailPresenter";
 
 const DetailContainer = () => {
   console.log(this.props);
-  return <div />;
+  return <DetailPresenter />;
 };
 
 export default DetailContainer;
