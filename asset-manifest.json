@@ -1,12 +1,12 @@
 {
-  "main.js": "/bookcurator/static/js/main.32952c74.chunk.js",
-  "main.js.map": "/bookcurator/static/js/main.32952c74.chunk.js.map",
+  "main.js": "/bookcurator/static/js/main.b4903ac1.chunk.js",
+  "main.js.map": "/bookcurator/static/js/main.b4903ac1.chunk.js.map",
   "runtime~main.js": "/bookcurator/static/js/runtime~main.67693896.js",
   "runtime~main.js.map": "/bookcurator/static/js/runtime~main.67693896.js.map",
-  "static/js/2.0c500684.chunk.js": "/bookcurator/static/js/2.0c500684.chunk.js",
-  "static/js/2.0c500684.chunk.js.map": "/bookcurator/static/js/2.0c500684.chunk.js.map",
+  "static/js/2.ff036679.chunk.js": "/bookcurator/static/js/2.ff036679.chunk.js",
+  "static/js/2.ff036679.chunk.js.map": "/bookcurator/static/js/2.ff036679.chunk.js.map",
   "index.html": "/bookcurator/index.html",
-  "precache-manifest.dbb7cc5d8d1566235461b232baba3f0f.js": "/bookcurator/precache-manifest.dbb7cc5d8d1566235461b232baba3f0f.js",
+  "precache-manifest.8beb624ddd78b51f5f24d55354831026.js": "/bookcurator/precache-manifest.8beb624ddd78b51f5f24d55354831026.js",
   "service-worker.js": "/bookcurator/service-worker.js",
   "static/media/noPoster.jpg": "/bookcurator/static/media/noPoster.f31a6ce5.jpg"
 }
