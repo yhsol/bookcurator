@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { movieApi, tvApi } from "../Api";
-import Section from "../Components/Section";
 import DetailPresenter from "./DetailPresenter";
+import { withRouter } from "react-router-dom";
+import { bookApi } from "../../api";
 
 const Detail = props => {
   const [result, setResult] = useState(null);
@@ -10,23 +10,15 @@ const Detail = props => {
   const {
     match: {
       params: { id }
-    },
-    location: { pathname }
+    }
   } = props;
   const parsedID = parseInt(id);
-  const isMovie = pathname.includes("/movie/");
 
   const FetchData = async () => {
     try {
-      if (isMovie) {
-        const { data: result } = await movieApi.movieDetail(parsedID);
-        setResult(result);
-        console.log(result);
-      } else {
-        const { data: result } = await tvApi.tvDetail(parsedID);
-        setResult(result);
-        console.log(result);
-      }
+      const { data: result } = await bookApi.detail(parsedID);
+      setResult(result);
+      console.log(result);
     } catch (error) {
       setError("Can't find infomation");
     } finally {
@@ -44,4 +36,4 @@ const Detail = props => {
   return <DetailPresenter loading={loading} error={error} result={result} />;
 };
 
-export default Detail;
+export default withRouter(Detail);

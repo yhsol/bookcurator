@@ -12,6 +12,7 @@ import Grow from "@material-ui/core/Grow";
 const Container = styled.div`
   /* width: 75%; */
   margin: 20px auto;
+  padding: 1rem 2rem;
 `;
 
 const HomePresenter = ({ popular, upcoming, error, loading }) => {
