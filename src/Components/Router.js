@@ -17,17 +17,17 @@ import Board from "../UI/Board";
 export default () => (
   <Router>
     <React.Fragment>
-      {/* <Header /> */}
-      <Board>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/count" exact component={Count} />
-          <Route path="/recent" exact component={Recent} />
-          <Route path="/search" exact component={Search} />
-          <Route path="/detail/:id" exact component={Detail} />
-          <Redirect from="*" to="/" />
-        </Switch>
-      </Board>
+      <Header />
+      {/* <Board> */}
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/count" exact component={Count} />
+        <Route path="/recent" exact component={Recent} />
+        <Route path="/search" exact component={Search} />
+        <Route path="/detail/:id" exact component={Detail} />
+        <Redirect from="*" to="/" />
+      </Switch>
+      {/* </Board> */}
     </React.Fragment>
   </Router>
 );

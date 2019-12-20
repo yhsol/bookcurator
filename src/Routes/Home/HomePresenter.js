@@ -6,11 +6,10 @@ import Loader from "../../Components/Loader";
 import ErrorMessage from "../../Components/ErrorMessage";
 import PosterSmall from "../../Components/PosterSmall";
 import Helmet from "react-helmet";
-import CountContainer from "../Count/CountContainer";
 import Grow from "@material-ui/core/Grow";
 
 const Container = styled.div`
-  /* width: 75%; */
+ width: 75%;
   margin: 20px auto;
   padding: 1rem 2rem;
 `;

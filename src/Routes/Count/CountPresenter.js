@@ -8,7 +8,7 @@ import Poster from "../../Components/Poster";
 import Helmet from "react-helmet";
 
 const Container = styled.div`
-  /* width: 75%; */
+ width: 75%;
   margin: 20px auto;
 `;
 

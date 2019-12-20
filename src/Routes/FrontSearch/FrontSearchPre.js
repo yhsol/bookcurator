@@ -8,7 +8,7 @@ import PosterSmall from "../../Components/PosterSmall";
 import Helmet from "react-helmet";
 
 const Container = styled.div`
-  /* width: 75%; */
+ width: 75%;
   margin: 20px auto;
   display: flex;
   justify-content: center;

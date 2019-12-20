@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Container = styled.div`
-  /* width: 75%; */
+  width: 75%;
   margin: 50px auto;
   display: flex;
   justify-content: center;
