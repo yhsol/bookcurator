@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
+import useRouter from "./useRouter";
 
-const Header = styled.header`
+const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
@@ -55,23 +56,30 @@ const SLInk = styled(Link)`
   height: 64px;
 `;
 
-export default withRouter(({ location: { pathname } }) => (
-  <Header>
-    <HeaderArea>
-      <HeaderTitle>
-        <SLInk to="/">Bookcurator</SLInk>
-      </HeaderTitle>
-      <HeaderNav>
-        <NavItem current={pathname === "/count"}>
-          <SLInk to="/count">Count</SLInk>
-        </NavItem>
-        <NavItem current={pathname === "/recent"}>
-          <SLInk to="/recent">Recent</SLInk>
-        </NavItem>
-        <NavItem current={pathname === "/search"}>
-          <SLInk to="/search">Search</SLInk>
-        </NavItem>
-      </HeaderNav>
-    </HeaderArea>
-  </Header>
-));
+function Header() {
+  const router = useRouter();
+  const pathname = router.pathname;
+  console.log(router.pathname);
+  return (
+    <StyledHeader>
+      <HeaderArea>
+        <HeaderTitle>
+          <SLInk to="/">Bookcurator</SLInk>
+        </HeaderTitle>
+        <HeaderNav>
+          <NavItem current={pathname === "/count"}>
+            <SLInk to="/count">Count</SLInk>
+          </NavItem>
+          <NavItem current={pathname === "/recent"}>
+            <SLInk to="/recent">Recent</SLInk>
+          </NavItem>
+          <NavItem current={pathname === "/search"}>
+            <SLInk to="/search">Search</SLInk>
+          </NavItem>
+        </HeaderNav>
+      </HeaderArea>
+    </StyledHeader>
+  );
+}
+
+export default withRouter(Header);
